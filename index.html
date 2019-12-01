@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Akan Name Generator.</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1><strong>AKAN NAME GENERATOR.</strong></h1>
+    </div>
+    <div class="container">
+      <p class="introduction"></p>
+        <span class="T">T</span>his site will help you to be able to know what your Akan name would be. <br>
+        To be able to know, fill out this form.</p>
+        <p>Enter your details here.</p>
+      <p>Year of birth</p>
+      <form> 
+        <input  placeholder="0000-9999" type="number" id="year"><br>
+        <p>Month of birth.</p>
+        <input placeholder="0-12" type="number" id="month"><br>
+        <p>Date of Birth</p>
+        <input placeholder="0-31" type="number" id="date"><br>
+        <input type="radio" name="gender" id="female" value="female" onclick=" return getDay()" checked>FEMALE<br>
+        <input type="radio" name="gender" id="male" value="male" onclick="return dayOfWeek()">MALE<br><br> 
+      </form><br>
+      <section>
+          <p class="yourAkanName"> Your Akan name would have been</p>
+          <p id="feedback"></p>
+      </section>
+      <div class="footer">
+          <h2>REACH ME.</h2>
+          <ul>
+              <li>raychengole97@gmail.com</li>
+              <li>+254 700 775 732</li>
+          </ul>
+      </div>
+    </div>
+    <script>
+      function getDay(){
+        var year = parseInt(document.getElementById("year").value | 0);
+        var month = parseInt(document.getElementById("month").value | 0);
+        var date = parseInt(document.getElementById("date").value | 0);
+        var x = new Date(year, month, date);
+        var y = d.getDay();
+
+        if (y == 0){
+           document.getElementById("feedback").innerHTML += "Akosua";
+        }
+        if (y == 1){
+           document.getElementById("feedback").innerHTML += "Adwoa";
+        }
+        if (y == 2){
+            document.getElementById("feedback").innerHTML += "Abenaa";
+        }
+        if (y == 3){
+            document.getElementById("feedback").innerHTML += "Akua";
+        }
+        if (y == 4){
+            document.getElementById("feedback").innerHTML += "Yaa";
+        }
+        if (y == 5){
+            document.getElementById("feedback").innerHTML += "Afua";
+        }
+        if (y == 6){
+            document.getElementById("feedback").innerHTML +=  "Ama";
+        }
+      /*function dayOfWeek(){
+        var year = parseInt(document.getElementById("year").value | 0);
+        var month = parseInt(document.getElementById("month").value | 0);
+        var date = parseInt(document.getElementById("date").value | 0);
+        var f = new Date(year, month, date);
+        var p = d.getDay;
+
+        if (p == 0){
+            document.getElementById("feedback").innerHTML += "Kwasi";
+        }
+        if (p == 1){
+            document.getElementById("feedback").innerHTML += "Kwadwo";
+        }
+        if (p == 2){
+            document.getElementById("feedback").innerHTML += "Kwabena";
+        }
+        if (p == 3){
+            document.getElementById("feedback").innerHTML += "Kwaku";
+        }
+        if (p == 4){
+            document.getElementById("feedback").innerHTML += "Yaw";
+        }
+        if (p == 5){
+            document.getElementById("feedback").innerHTML += "Kofi";
+        }
+        if (p == 6){
+            document.getElementById("feedback").innerHTML += "Kwame";
+        }*/
+      }
+    </script>
+    
+</body>
+</html>
